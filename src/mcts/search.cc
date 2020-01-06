@@ -203,7 +203,7 @@ inline float ComputeCpuct(const SearchParams& params, uint32_t N) {
   const float init = params.GetCpuct();
   const float k = params.GetCpuctFactor();
   const float base = params.GetCpuctBase();
-  return init + (k ? k * FastLog((N + base) / base) : 0.0f) + 0.1 * Fastlog(N);
+  return init + (k ? k * FastLog((N + base) / base) : 0.0f) + 0.1 * FastLog(N);
 }
 }  // namespace
 
